@@ -11,22 +11,6 @@ object Utils {
         return firstName to lastName
     }
 
-//    fun transliteration(transliteration: String, divider: String = " "): String {
-////        TODO("FIX ME")
-//        val parts = transliteration.trim().ifEmpty { null }?.split("\\s+".toRegex())
-//
-//
-//        var firstName = parts?.getOrNull(0)?.toCharArray()
-//        var lastName = parts?.getOrNull(1)?.toCharArray()
-//
-//        var result =""
-//        if (firstName != null) {
-//            for (item in firstName) result += transliterationChar(item)
-//        }
-////        val result = transliteration(firstName.)
-//        return result
-//    }
-
     fun transliterationChar(char: Char): String? = when (char) {
         'а' -> "a"
         'б' -> "b"

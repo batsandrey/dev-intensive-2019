@@ -12,6 +12,6 @@ class ImageMessage(
     var image: String?
 ) : BaseMessage(id, from, chat, isIncomming, date) {
 //    TODO("fix it")
-    override fun formatMessage(): String = "id:$id ${from?.firstName}" +
+    override fun formatMessage(): String = "${from?.firstName}" +
                     " ${if (isIncomming) "получил" else "отправил"} изображение \"$image\" ${date.humanizeDiff()}"
 }
