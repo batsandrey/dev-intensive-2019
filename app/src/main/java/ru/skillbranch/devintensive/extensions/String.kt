@@ -1,10 +1,19 @@
 package ru.skillbranch.devintensive.extensions
 
-fun String.truncate(length: Int = 16) =
-    if (this.trimEnd().length > length)
-        this.take(length+1).trimEnd().plus("...")
+//fun String.truncate(length: Int = 16) =
+//    if (this.trimEnd().length > length)
+//        this.take(length+1).trimEnd().plus("...")
+//    else
+//        this.trimEnd()
+
+fun String.truncate(length: Int = 16): String {
+    var truncate = this.trim()
+
+    if (truncate.trimStart().length > length)
+        return truncate.take(length).trimStart().trimEnd().plus("...")
     else
-        this.trimEnd()
+        return truncate.trimStart()
+}
 
 fun String.stripHtml() =
     this
